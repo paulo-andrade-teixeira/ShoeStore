@@ -29,7 +29,8 @@ namespace CleanArchitecture.Persistence.Repository
         public void Delete(T entity)
         {
             entity.DateDeleted = DateTimeOffset.UtcNow;
-            _appDbContext.Remove(entity);
+            entity.IsDeleted = true;
+            _appDbContext.Update(entity);
         }
 
         public async Task<T?> Get(Guid id, CancellationToken cancellationToken)

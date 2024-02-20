@@ -4,6 +4,7 @@ using CleanArchitecture.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace CleanArchitecture.Persistence
 {
@@ -14,7 +15,7 @@ namespace CleanArchitecture.Persistence
             var connectionString = configuration.GetConnectionString("SqlServer");
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
     }
 }
