@@ -4,6 +4,6 @@ namespace CleanArchitecture.Domain.Interfaces
 {
     public interface IProductRepository : IBaseRepository<ProductEntity>
     {
-        Task<List<ProductEntity>> GetByName(string name);
+        Task<List<ProductEntity>> GetByNameAsync(string name);
     }
 }

@@ -11,7 +11,7 @@ namespace CleanArchitecture.Persistence.Repository
         {
         }
 
-        public async Task<List<ProductEntity>> GetByName(string name)
+        public async Task<List<ProductEntity>> GetByNameAsync(string name)
         {
             return await _appDbContext.Products
                 .Where(p => p.Name == name)
