@@ -1,6 +1,6 @@
 using CleanArchitecture.Application.Services;
 using CleanArchitecture.Persistence.Context;
-using CleanArchitecture.Persistence;
+using CleanArchitecture.Persistence.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

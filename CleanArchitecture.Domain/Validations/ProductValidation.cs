@@ -1,11 +1,11 @@
 ﻿using CleanArchitecture.Domain.Entities;
 using FluentValidation;
 
-namespace CleanArchitecture.Application.UseCases.Product
+namespace CleanArchitecture.Domain.Validations
 {
-    public sealed class ProductValidator : AbstractValidator<ProductEntity>
+    public class ProductValidation : AbstractValidator<ProductEntity>
     {
-        public ProductValidator() {
+        public ProductValidation() {
             RuleFor(x => x.Code).NotEmpty().MaximumLength(50);
             RuleFor(x => x.Name).NotEmpty().MaximumLength(50);
             RuleFor(x => x.Description).NotEmpty().MaximumLength(300);

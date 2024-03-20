@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture.Domain.Interfaces
 {
-    public interface IBaseRepository<T> where T : BaseEntity
+    public interface IBaseRepository<T> where T : BaseEntity<T>, IBaseEntity
     {
         void Create(T entity);
         void Update(T entity);

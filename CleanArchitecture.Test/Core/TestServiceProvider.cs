@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CleanArchitecture.Application.Services;
-using CleanArchitecture.Persistence;
+using CleanArchitecture.Persistence.Services;
 
 namespace CleanArchitecture.Tests.Core
 {

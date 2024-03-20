@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace CleanArchitecture.Persistence
+namespace CleanArchitecture.Persistence.Services
 {
     public static class ServiceExtensions
     {

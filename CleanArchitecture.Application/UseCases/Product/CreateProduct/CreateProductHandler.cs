@@ -22,6 +22,7 @@ namespace CleanArchitecture.Application.UseCases.CreateUser
         public async Task<CreateProductResponse> Handle(CreateProductRequest request, CancellationToken cancellationToken)
         {
             var product = _mapper.Map<ProductEntity>(request);
+            await product.ValidateAndThrow();
             _productRepository.Create(product);
             await _unitOfWork.Commit(cancellationToken);
             return _mapper.Map<CreateProductResponse>(product);
